@@ -21,7 +21,8 @@
       "mode": "production",
       "cors": {
         "origins": [
-          "http://localhost:4280"
+          "http://localhost:4280",
+          "https://calm-hill-09bbb1f03.3.azurestaticapps.net/"
         ],
         "allow-credentials": false
       },
