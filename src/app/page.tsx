@@ -1,6 +1,6 @@
 async function getData() {
 
-  let host = process.env.NODE_ENV === 'production' ? '/' : 'http://localhost:4280/'; // This is where the database thing runs
+  let host = process.env.NODE_ENV === 'production' ? 'http://localhost:4280/' : 'http://localhost:4280/'; // This is where the database thing runs
   let res = await fetch(`${host}data-api/rest/Person`);
 
   if (!res.ok) {
