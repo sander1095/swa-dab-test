@@ -1,6 +1,5 @@
 async function getData() {
-  let host = 'https://calm-hill-09bbb1f03.3.azurestaticapps.net/'
-  // let host = process.env.NODE_ENV === 'production' ? 'https://calm-hill-09bbb1f03.3.azurestaticapps.net/' : 'http://localhost:4280/'; // This is where the database thing runs
+  let host = process.env.NODE_ENV === 'production' ? 'https://calm-hill-09bbb1f03.3.azurestaticapps.net/' : 'http://localhost:4280/'; // This is where the database thing runs
   let res = await fetch(`${host}data-api/rest/Person`);
 
   if (!res.ok) {
