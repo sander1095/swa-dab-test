@@ -13,6 +13,6 @@ async function getData() {
 }
 
 export default async function Page() {
-  const data = await getData();
-  return (<><h1>Database information</h1><p>{data}</p></>)
+  // const data = await getData();
+  return (<><h1>Database information</h1></>)
 }
