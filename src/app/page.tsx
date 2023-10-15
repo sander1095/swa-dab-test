@@ -1,13 +1,13 @@
 async function getData() {
   let host = process.env.NODE_ENV === 'production' ? 'https://calm-hill-09bbb1f03.3.azurestaticapps.net/' : 'http://localhost:4280/'; // This is where the database thing runs
   let res = await fetch(`${host}data-api/rest/Person`);
+  let text = await res.text();
 
   if (!res.ok) {
     // This will activate the closest `error.js` Error Boundary
-    throw new Error('Failed to fetch data')
+    throw new Error(`Failed to fetch data: ${text}`);
   }
 
-  let text = await res.text();
   return text;
 }
 
